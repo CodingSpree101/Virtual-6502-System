@@ -26,5 +26,5 @@ A fibonacci.asm file is provided for testing.
  It should be noted the assembler is also in BETA so bugs may occur.
 
 Minimum Requirements:
-Python 3
+Python 3,
 Numpy
