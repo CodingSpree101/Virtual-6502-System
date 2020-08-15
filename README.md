@@ -19,5 +19,8 @@ A VC28C.rom file should be present in the same folder which contains the code fo
 
 To use the VC02 Assembler , create an assembly source file with the code the open the command prompt and navigate to the folder and write the following command:
 $ python vcasm.py [filename].asm [rom size]
-  
+
+A fibonacci.asm file is provided for testing.
+
+
  It should be noted the assembler is also in BETA so bugs may occur.
