@@ -1,0 +1,36 @@
+Instruction cycle algorithm:
+
+1.Increment Program Counter
+2.Put the Program Counter on Address Bus and and get Data from that memory location into the Data Bus
+3.Fetch the instruction from data bus
+4.Increment the program counter 0,1,2 times based on the instruction size(3 Bytes Max)
+5. Goto 1
+
+1 Byte instruction taks 2 clock cycles.
+
+VC02 CPU opcodes:
+
+LDA(Load into A register immediate)- 0xa9 [LDA #DATA]
+LDA(Load into A register absolute)- 0xad [LDA MEM]
+LDA(Load into A register zero page)- 0xa5 [LDA DATA]
+LDA(Load into A register absolute+X)- 0xbd [LDA MEM,X]
+STA(Store A register absolute)- 0x8d [STA MEM]
+STA(Store A register zero page)- 0x85 [STA DATA]
+TAX(Transfer A to X)- 0xaa [TAX]
+TXA(Transfer X to A)- 0x8a [TXA]
+CMP(Compare with A register immediate)- 0xc9 [CMP #DATA]
+LDX(Load into X register immediate)- 0xa2 [LDX #DATA]
+STX(Store X register absolute)- 0x8e [STX MEM]
+INX(Increment X register)- 0xe8 [INX]
+DEX(Decrement X register)- 0xca [DEX]
+CPX(Compare with X register immediate)- 0xe0 [CPX #DATA]
+ADD(Add to A register immediate)- 0x69 [ADD #DATA]
+ADD(Add to A register absolute)- 0x6d [ADD MEM]
+ADD(ADD to A register zero page)- 0x65 [ADD DATA]
+SUB(Subtract from A register immediate)- 0xe9 [SUB #DATA]
+JMP(Jump absolute)- 0x4c [JMP MEM]
+BEQ(Branch to address if zero flag is enabled)- 0xf0 [BEQ MEM]
+JSR(Jump to Sub routine)- 0x20 [JMP MEM]
+RTS(Return from Sub routine)- 0x60 [RTS]
+NOP(No operation)- 0xea [NOP]
+HLT(Halt CPU)- 0x14 [HLT]
